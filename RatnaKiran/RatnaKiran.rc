@@ -1,0 +1,1332 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\RatnaKiran.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\mainicon.ICO"
+IDR_RATNAKTYPE          ICON    DISCARDABLE     "res\\RatnaKiranDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_STATE_IMAGE         BITMAP  MOVEABLE PURE   "res\\state.bmp"
+IDB_BLACK_IMAGE         BITMAP  MOVEABLE PURE   "res\\empty.bmp"
+IDB_WHITE_IMAGE         BITMAP  MOVEABLE PURE   "res\\empty_im.bmp"
+IDB_PRINT               BITMAP  MOVEABLE PURE   "res\\bitmap1.bmp"
+IDB_PREVIOUS            BITMAP  MOVEABLE PURE   "res\\bmp00001.bmp"
+IDB_NEXT                BITMAP  MOVEABLE PURE   "res\\bmp00002.bmp"
+IDB_CANCEL              BITMAP  MOVEABLE PURE   "res\\bmp00003.bmp"
+IDB_PRINT_THIS_PAGE     BITMAP  MOVEABLE PURE   "res\\print.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR MOVEABLE PURE  16, 15
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&Vouchers"
+    BEGIN
+        POPUP "&Create new ..."
+        BEGIN
+            MENUITEM "&Stock voucher",              ID_TREE_CREATENEWSTOCKVOUCHER
+
+            MENUITEM "&Export voucher",             ID_TREE_CREATENEWEXPORTVOUCHER
+
+            MENUITEM "&Kundan voucher",             ID_TREE_CREATENEWKUNDANVOUCHER
+
+        END
+        MENUITEM "&Delete selected",            ID_TREE_DELETESELECTED
+        MENUITEM "Ignore selected",             ID_TREE_IGNORESELECTED
+        MENUITEM "&Update information",         ID_TREE_UPDATEINFORMATION
+        MENUITEM SEPARATOR
+        POPUP "&Query set"
+        BEGIN
+            MENUITEM "By Product ID",               ID_TREE_QUERYSET_ID
+            MENUITEM "By Gross Weight",             ID_TREE_QUERYSET_GROSS_WEIGHT
+
+        END
+        POPUP "&Mark item as sold"
+        BEGIN
+            MENUITEM "On &ProductID",               ID_TREE_MARKITEMASSOLD_ONPRODUCTID
+
+            MENUITEM "On &Serial number",           ID_TREE_MARKITEMASSOLD_ONSERIALNUMBER
+
+        END
+        MENUITEM "Delete &sold items",          ID_TREE_DELETESOLDITEMS
+        MENUITEM "&Reallocate serial numbers",  ID_TREE_REALLOCATESERIALNUMBERS
+
+    END
+    POPUP "&Sets"
+    BEGIN
+        MENUITEM "&Add New",                    ID_SET_ADDNEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit Current",               ID_SET_EDIT
+        POPUP "&Delete"
+        BEGIN
+            MENUITEM "Delete C&urrent",             ID_SET_DELETE_CURRENT
+            MENUITEM "Delete &Highlighted",         ID_SET_DELETE_HIGHLIGHTED
+
+            MENUITEM "Delete &Checked",             ID_SET_DELETE_CHECKED
+            MENUITEM "&Delete Checked and Highlighted", 
+                                                    ID_SET_DELETECHECKED_HIGHLIGHTED
+
+        END
+        POPUP "&Move"
+        BEGIN
+            MENUITEM "&Create new voucher",         ID_SET_MOVE_CREATENEW
+            MENUITEM "&Add to existing voucher",    ID_SET_MOVE_ADDTOEXISTING
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Select Highlighted",          ID_SET_SELECTHIGHLIGHTED
+        MENUITEM "Select All",                  ID_SET_SELECTALL
+        MENUITEM "Unselect Highlighted",        ID_SET_UNSELECTHIGHLIGHTED
+        MENUITEM "Unselect All",                ID_SET_UNSELECTALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Change ProductID",           ID_SET_CHANGEPRODUCTID
+        MENUITEM "&Reset old serials",          ID_SET_RESETOLDSERIALS
+    END
+    POPUP "&Reports"
+    BEGIN
+        POPUP "&Stock"
+        BEGIN
+            POPUP "&Stocks report"
+            BEGIN
+                POPUP "&Actuals"
+                BEGIN
+                    MENUITEM "&Original",                   ID_REPORTS_STOCK_STOCKSREPORT_ACTUALS_ORIGINAL
+
+                    MENUITEM "&Sold",                       ID_REPORTS_STOCK_STOCKSREPORT_ACTUALS_SOLD
+
+                    MENUITEM "&Unsold",                     ID_REPORTS_STOCK_STOCKSREPORT_ACTUALS_UNSOLD
+
+                END
+                POPUP "&Marked"
+                BEGIN
+                    MENUITEM "&Original",                   ID_REPORTS_STOCK_STOCKSREPORT_MARKED_ORIGINAL
+
+                    MENUITEM "&Sold",                       ID_REPORTS_STOCK_STOCKSREPORT_MARKED_SOLD
+
+                    MENUITEM "&Unsold",                     ID_REPORTS_STOCK_STOCKSREPORT_MARKED_UNSOLD
+
+                END
+            END
+            POPUP "Price &Quotation"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_STOCK_PRICEQUOTATION_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_STOCK_PRICEQUOTATION_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_STOCK_PRICEQUOTATION_UNSOLD
+
+            END
+            POPUP "&Checklist"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_STOCK_CHECKLIST_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_STOCK_CHECKLIST_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_STOCK_CHECKLIST_UNSOLD
+
+            END
+            MENUITEM "&Tags",                       ID_REPORTS_STOCK_TAGS
+            POPUP "Photo &Invoice"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_STOCK_PHOTOINVOICE_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_STOCK_PHOTOINVOICE_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_STOCK_PHOTOINVOICE_UNSOLD
+
+            END
+        END
+        POPUP "&Kundan"
+        BEGIN
+            POPUP "&Stocks report"
+            BEGIN
+                POPUP "&Actuals"
+                BEGIN
+                    MENUITEM "&Original",                   ID_REPORTS_KUNDAN_STOCKSREPORT_ACTUALS_ORIGINAL
+
+                    MENUITEM "&Sold",                       ID_REPORTS_KUNDAN_STOCKSREPORT_ACTUALS_SOLD
+
+                    MENUITEM "&Unsold",                     ID_REPORTS_KUNDAN_STOCKSREPORT_ACTUALS_UNSOLD
+
+                END
+                POPUP "&Marked"
+                BEGIN
+                    MENUITEM "&Original",                   ID_REPORTS_KUNDAN_STOCKSREPORT_MARKED_ORIGINAL
+
+                    MENUITEM "&Sold",                       ID_REPORTS_KUNDAN_STOCKSREPORT_MARKED_SOLD
+
+                    MENUITEM "&Unsold",                     ID_REPORTS_KUNDAN_STOCKSREPORT_MARKED_UNSOLD
+
+                END
+            END
+            POPUP "&Checklist"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_KUNDAN_CHECKLIST_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_KUNDAN_CHECKLIST_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_KUNDAN_CHECKLIST_UNSOLD
+
+            END
+            MENUITEM "&Tags",                       ID_REPORTS_KUNDAN_TAGS
+        END
+        POPUP "&Export"
+        BEGIN
+            POPUP "&Package List"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_EXPORT_PACKAGELIST_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_EXPORT_PACKAGELIST_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_EXPORT_PACKAGELIST_UNSOLD
+
+            END
+            POPUP "&Short Invoice"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_EXPORT_SHORTINVOICE_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_EXPORT_SHORTINVOICE_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_EXPORT_SHORTINVOICE_UNSOLD
+
+            END
+            POPUP "Photo &Invoice"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_EXPORT_PHOTOINVOICE_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_EXPORT_PHOTOINVOICE_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_EXPORT_PHOTOINVOICE_UNSOLD
+
+            END
+            MENUITEM "&GR Form",                    ID_REPORTS_EXPORT_GRFORM
+            POPUP "Price &Quotation"
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_EXPORT_PRICEQUOTATION_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_EXPORT_PRICEQUOTATION_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_EXPORT_PRICEQUOTATION_UNSOLD
+
+            END
+            POPUP "&Checklist", HELP
+            BEGIN
+                MENUITEM "&Original",                   ID_REPORTS_EXPORT_CHECKLIST_ORIGINAL
+
+                MENUITEM "&Sold",                       ID_REPORTS_EXPORT_CHECKLIST_SOLD
+
+                MENUITEM "&Unsold",                     ID_REPORTS_EXPORT_CHECKLIST_UNSOLD
+
+            END
+            MENUITEM "&Tags",                       ID_REPORTS_EXPORT_TAGS
+        END
+        MENUITEM "&Catalogue",                  ID_REPORTS_CATALOGUE
+    END
+    POPUP "Se&ttings"
+    BEGIN
+        POPUP "&View"
+        BEGIN
+            MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+            MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        END
+        POPUP "&Using for exports"
+        BEGIN
+            MENUITEM "&Native Currency",            ID_USINGFOREXPORTS_NATIVECURRENCY
+
+            MENUITEM "&Dollar (USD)",               ID_USINGFOREXPORTS_DOLLARUSD
+
+        END
+        MENUITEM "Change &File Path",           ID_SETTINGS_CHANGEFILEPATH
+        MENUITEM "Change &Gold Rate",           ID_SETTINGS_UPDATEGOLDRATE
+        MENUITEM "&Manage description database", 
+                                                ID_SETTINGS_MANAGEDESCRIPTIONDATABASE
+
+        MENUITEM SEPARATOR
+        MENUITEM "Add User",                    ID_USER_ADD
+        MENUITEM "Delete User",                 ID_USER_DELETE
+        MENUITEM "Edit User Permissions",       ID_USER_EDIT_PERM
+        MENUITEM "Change Password",             ID_USER_CHANGE_PASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "Backup database files",       ID_SETTINGS_BACKUP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About RatnaKiran...",        ID_APP_ABOUT
+    END
+    MENUITEM "E&xit",                       ID_APP_EXIT
+END
+
+IDR_PREVIEW MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Previous Page",               ID_PREVIOUS
+    MENUITEM "Next Page",                   ID_NEXT
+    MENUITEM SEPARATOR
+    MENUITEM "Print",                       ID_PRINT
+    MENUITEM "Cancel",                      ID_CANCEL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STOCK_VIEW DIALOG DISCARDABLE  0, 0, 246, 51
+STYLE DS_3DLOOK | DS_CENTER | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_AUTOARRANGE | 
+                    WS_BORDER | WS_TABSTOP,5,5,235,40
+END
+
+IDD_APPENDLIST_DIALOG DIALOG DISCARDABLE  0, 0, 186, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Append to voucher/list"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Choose a list/voucher to which to add/move",IDC_STATIC,
+                    5,10,170,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_LIST,5,25,175,175,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,40,50,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,50,50,14
+END
+
+IDD_OPTION_DIALOG DIALOG DISCARDABLE  0, 0, 186, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Do you want to ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Print data",IDC_OPTION_PRINT,"Button",
+                    BS_AUTORADIOBUTTON,10,10,100,15
+    CONTROL         "Save to Excel file",IDC_OPTION_SAVEFILE,"Button",
+                    BS_AUTORADIOBUTTON,10,25,100,15
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_DETAILS_DIALOG_EXPORT DIALOG DISCARDABLE  0, 0, 372, 266
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export voucher details"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Exporter",IDC_STATIC,5,5,50,40,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_EXPORTER,60,5,110,40,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Consignee",IDC_STATIC,185,5,50,40,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_CONSIGNEE,240,5,110,40,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Invoice number",IDC_STATIC,5,50,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_INVOICE,60,50,110,15,ES_AUTOHSCROLL
+    LTEXT           "Country",IDC_STATIC,185,50,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_COUNTRY,240,50,110,15,ES_AUTOHSCROLL
+    LTEXT           "Currency",IDC_STATIC,5,65,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_CURRENCY,60,65,110,15,ES_AUTOHSCROLL
+    LTEXT           "Conversion rate",IDC_STATIC,185,65,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_CONVERSION_RATE,240,65,30,15,ES_AUTOHSCROLL
+    LTEXT           "(in Rs. per unit of currency)",IDC_STATIC,275,65,85,15,
+                    SS_CENTERIMAGE
+    LTEXT           "USD Rate",IDC_STATIC,5,80,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_USD_RATE,60,80,30,15,ES_AUTOHSCROLL
+    LTEXT           "(in Rs. per USD)",IDC_STATIC,90,80,55,15,SS_CENTERIMAGE
+    LTEXT           "Gold Rate",IDC_STATIC,185,80,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORT_GOLD_RATE,240,80,30,15,ES_AUTOHSCROLL
+    LTEXT           "(in USD per 10 Gm. for 24K)",IDC_STATIC,275,80,90,15,
+                    SS_CENTERIMAGE
+    GROUPBOX        "For Customs (Package List, Short Invoice, Tags, etc.)",
+                    IDC_STATIC,55,105,255,85
+    LTEXT           "Labour cost",IDC_STATIC,65,120,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_VALUE_ADDED_LABOUR,121,120,180,15,
+                    ES_AUTOHSCROLL
+    LTEXT           "Diamond Rate",IDC_STATIC,65,135,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_DIAMOND_RATE,121,135,180,15,ES_AUTOHSCROLL
+    LTEXT           "Pearl Rate",IDC_STATIC,65,150,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_PEARL_RATE,121,150,180,15,ES_AUTOHSCROLL
+    LTEXT           "Stone Rate",IDC_STATIC,65,165,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_STONE_RATE,121,165,180,15,ES_AUTOHSCROLL
+    GROUPBOX        "For Price Quotation",IDC_STATIC,55,195,255,40
+    LTEXT           "Price Quote",IDC_STATIC,65,211,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_PRICE_QUOTE,121,211,180,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,130,245,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,245,50,14
+END
+
+IDD_MARKED_VALUE_FORMULA_DIALOG_STOCK DIALOG DISCARDABLE  0, 0, 252, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Marked value formulas for stock"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Diamond",IDC_STATIC,5,5,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_DIAMOND,55,5,190,15,ES_AUTOHSCROLL
+    LTEXT           "Pr/SPr Stone",IDC_STATIC,5,20,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_PRECIOUS_STONE,55,20,190,15,ES_AUTOHSCROLL
+    LTEXT           "Pearl",IDC_STATIC,5,35,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_PEARL,55,35,190,15,ES_AUTOHSCROLL
+    LTEXT           "Labour Cost",IDC_STATIC,5,50,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_LABOUR,55,50,190,15,ES_AUTOHSCROLL
+    LTEXT           "Total Marked Price",IDC_STATIC,50,70,65,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_MARKED_PRICE,120,70,70,15,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,75,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,95,50,14
+END
+
+IDD_DESCRIPTION_ADD_DIALOG DIALOG DISCARDABLE  0, 0, 202, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add description"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Description Name",IDC_STATIC,5,5,90,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_NAME,5,20,115,15,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_TABSTOP
+    LTEXT           "ID prefix",IDC_STATIC,5,45,90,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_PREFIX,5,60,115,15,ES_AUTOHSCROLL
+    LTEXT           "No. of pieces",IDC_STATIC,135,5,60,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_NUMBER_OF_PIECES,135,20,55,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,140,50,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,67,50,14
+END
+
+IDD_ADD_DIALOG_EXPORT DIALOG DISCARDABLE  0, 0, 455, 262
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Manage Export Set"
+FONT 7, "Tahoma"
+BEGIN
+    LTEXT           "Product ID",IDC_STATIC,50,30,46,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PRODUCTID,101,30,120,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,50,45,45,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_ITEM_DESCRIPTION,101,45,120,80,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",ID_ITEM_DESCRIPTION_LIST,226,45,15,10,NOT 
+                    WS_TABSTOP
+    LTEXT           "Photograph",IDC_STATIC,50,61,46,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PHOTO,101,60,120,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "+",ID_ITEM_CHANGE_IMAGE,226,60,20,10
+    PUSHBUTTON      "-",ID_ITEM_REMOVE_IMAGE,250,60,20,10
+    LTEXT           "Serial number",IDC_STATIC,25,85,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERIAL_NUMBER,80,85,35,12,ES_AUTOHSCROLL
+    LTEXT           "Gross Weight",IDC_STATIC,25,100,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_GROSS_WEIGHT,81,100,35,12,ES_AUTOHSCROLL
+    LTEXT           "Net Weight",IDC_STATIC,25,115,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_NET_WEIGHT,81,115,35,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "Gold Value",IDC_STATIC,25,131,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_GOLD_VALUE,81,131,35,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "No. of pieces",IDC_STATIC,130,85,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PIECE_COUNT,190,85,35,12,ES_AUTOHSCROLL
+    LTEXT           "Labour Charge",IDC_STATIC,130,100,55,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_LABOUR_CHARGE,190,100,35,12,ES_AUTOHSCROLL
+    LTEXT           "Other Weight",IDC_STATIC,130,115,55,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OTHER_WEIGHT,190,115,35,12,ES_AUTOHSCROLL
+    LTEXT           "Total Price",IDC_STATIC,130,129,55,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TOTAL_PRICE,190,129,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "Sold Item",IDC_ITEM_SOLD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,245,85,55,10
+    LTEXT           "Sold in country",IDC_STATIC,245,100,55,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SOLD_COUNTRY,245,115,60,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Old serial numbers",ID_OLD_SERIALS,235,130,70,15
+    GROUPBOX        "Diamond",IDC_STATIC,25,155,85,90
+    LTEXT           "Weight",IDC_STATIC,34,171,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_WEIGHT,65,171,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Rate",IDC_STATIC,34,185,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_RATE,65,185,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Value",IDC_STATIC,34,201,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_VALUE,65,199,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "More details ...",ID_DIAMOND_DETAILS,34,220,65,15
+    GROUPBOX        "Pr / SPr Stones",IDC_STATIC,115,155,85,91
+    LTEXT           "Weight",IDC_STATIC,124,171,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_WEIGHT,155,171,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Rate",IDC_STATIC,124,185,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_RATE,155,185,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Value",IDC_STATIC,124,201,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_VALUE,155,199,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "More details ...",ID_STONE_DETAILS,124,220,65,15
+    GROUPBOX        "Pearl",IDC_STATIC,205,155,85,65
+    LTEXT           "Weight",IDC_STATIC,214,171,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_WEIGHT,245,169,35,12,ES_AUTOHSCROLL
+    LTEXT           "Rate",IDC_STATIC,214,185,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_RATE,245,185,35,12,ES_AUTOHSCROLL
+    LTEXT           "Value",IDC_STATIC,214,200,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_VALUE,245,200,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Clarity",IDC_STATIC,215,232,25,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_CLARITY,246,230,35,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IMAGE_FRAME,"Static",SS_BLACKFRAME | SS_SUNKEN,
+                    325,5,125,110
+    PUSHBUTTON      "Add Item",ID_ITEM_ADD,335,130,105,15
+    PUSHBUTTON      "Delete Item",ID_ITEM_DELETE,335,145,105,15
+    DEFPUSHBUTTON   "Save and close",ID_SET_SAVE,335,185,105,15
+    PUSHBUTTON      "Close without saving",ID_SET_CANCEL,335,200,105,15
+    CONTROL         "Tab2",IDC_ITEM_TABS,"SysTabControl32",0x0,10,5,310,250
+END
+
+IDD_ABOUT_DIALOG DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RatnaKiran"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "RatnaKiran Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+END
+
+IDD_DETAILS_DIALOG_STOCK DIALOG DISCARDABLE  0, 0, 267, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Stock voucher details"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Gold Rate",IDC_STATIC,15,10,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_STOCK_GOLD_RATE,70,10,50,15,ES_AUTOHSCROLL
+    LTEXT           "(in Rs. per 1 Gm. for 18K)",IDC_STATIC,125,10,90,15,
+                    SS_CENTERIMAGE
+    GROUPBOX        "For Price Quotation",IDC_STATIC,5,35,255,40
+    LTEXT           "Price Quote",IDC_STATIC,15,51,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_PRICE_QUOTE,71,51,180,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,80,85,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,135,85,50,14
+END
+
+IDD_PROGRESS_DIALOG DIALOG DISCARDABLE  0, 0, 172, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please Wait ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,5,35,160,15
+    CTEXT           "",IDC_PROGRESS_WORK,5,5,160,25
+END
+
+IDD_SHORTINVOICE_DETAILS DIALOG DISCARDABLE  0, 0, 267, 257
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Short Invoice"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "GR Form No.",IDC_STATIC,5,10,75,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORTS_GR_NUMBER,85,10,174,15,ES_AUTOHSCROLL
+    LTEXT           "Exporter's Ref. GR No.",IDC_STATIC,5,30,75,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORTS_EXPORTER_GR_NUMBER,85,30,174,15,
+                    ES_AUTOHSCROLL
+    LTEXT           "Buyer's Order No.",IDC_STATIC,5,50,75,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORTS_ORDER_NUMBER,85,50,174,15,ES_AUTOHSCROLL
+    LTEXT           "Buyer",IDC_STATIC,5,74,75,15
+    EDITTEXT        IDC_EXPORTS_BUYER,85,70,174,40,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Pre-Carriage by",IDC_STATIC,5,114,75,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORTS_PRECARRIAGE,85,114,174,15,ES_AUTOHSCROLL
+    LTEXT           "Vessel/Flight No.",IDC_STATIC,5,135,75,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EXPORTS_VESSEL,85,135,175,15,ES_AUTOHSCROLL
+    LTEXT           "Place of receipt by pre-carrier",IDC_STATIC,5,154,75,20
+    EDITTEXT        IDC_EXPORTS_PLACE_RECEIPT,85,154,175,15,ES_AUTOHSCROLL
+    LTEXT           "Terms of delivery and payment",IDC_STATIC,5,186,75,20
+    EDITTEXT        IDC_EXPORTS_TERMS,85,180,174,40,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    DEFPUSHBUTTON   "OK",IDOK,80,234,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,136,234,50,14
+END
+
+IDD_GENERIC_TWO_EDIT_DIALOG DIALOG DISCARDABLE  0, 0, 117, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TITLE_1,21,10,80,15,ES_CENTER | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_ENTRY_1,21,25,80,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TITLE_2,21,45,80,15,ES_CENTER | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_ENTRY_2,21,60,80,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,5,85,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,85,50,14
+END
+
+IDD_GENERIC_ONE_EDIT_DIALOG DIALOG DISCARDABLE  0, 0, 137, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ENTRY,10,25,115,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,15,50,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,70,50,50,14
+    EDITTEXT        IDC_TITLE,10,10,115,15,ES_CENTER | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_GENERIC_LIST_BOX_DIALOG DIALOG DISCARDABLE  0, 0, 297, 206
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,5,5,205,195
+    PUSHBUTTON      "",ID_BUTTON_1,230,10,50,14
+    PUSHBUTTON      "",ID_BUTTON_2,230,25,50,14
+    DEFPUSHBUTTON   "OK",IDOK,230,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,230,182,50,14
+    EDITTEXT        IDC_TEXT,215,50,75,100,ES_MULTILINE | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_EXPORT_SERIALS_DIALOG DIALOG DISCARDABLE  0, 0, 129, 168
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Using Serials"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "From",IDC_STATIC,15,10,20,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FROM,40,10,60,15,ES_AUTOHSCROLL
+    LTEXT           "To",IDC_STATIC,15,25,20,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_TO,40,25,60,15,ES_AUTOHSCROLL
+    CONTROL         "Print product ID",IDC_USE_PRODUCTID,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,50,90,15
+    CONTROL         "Print old serial numbers",IDC_USE_OLD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,65,90,15
+    CONTROL         "Print new serial numbers",IDC_USE_NEW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,80,90,15
+    CTEXT           "Tagname for old serial numbers",IDC_STATIC_TAGNAME,10,
+                    105,105,10
+    EDITTEXT        IDC_TAGNAME,10,120,105,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Tagname for old serial numbers",IDC_TAGNAMES,5,105,115,
+                    35
+    DEFPUSHBUTTON   "OK",IDOK,10,145,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,65,145,50,14
+END
+
+IDD_MOVE_DIALOG DIALOG DISCARDABLE  0, 0, 130, 100
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Destination type"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Stock Voucher",IDC_STOCK,"Button",BS_AUTORADIOBUTTON,24,
+                    12,78,12
+    CONTROL         "Export Voucher",IDC_EXPORT,"Button",BS_AUTORADIOBUTTON,
+                    24,30,78,12
+    CONTROL         "Kundan Voucher",IDC_KUNDAN,"Button",BS_AUTORADIOBUTTON,
+                    24,48,78,12
+    DEFPUSHBUTTON   "OK",IDOK,12,78,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,66,78,50,14
+END
+
+IDD_DETAILS_DIALOG_KUNDAN DIALOG DISCARDABLE  0, 0, 267, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Kundan voucher details"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Gold Rate",IDC_STATIC,15,10,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_KUNDAN_GOLD_RATE,70,10,50,15,ES_AUTOHSCROLL
+    LTEXT           "(in Rs. per 1 Gm. for 18K)",IDC_STATIC,125,10,90,15,
+                    SS_CENTERIMAGE
+    GROUPBOX        "For Price Quotation",IDC_STATIC,5,35,255,40
+    LTEXT           "Price Quote",IDC_STATIC,15,51,55,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_PRICE_QUOTE,71,51,180,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,80,85,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,136,85,50,14
+END
+
+IDD_EDIT_PERMISSIONS DIALOG DISCARDABLE  0, 0, 262, 260
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Permissions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Username",IDC_STATIC,10,10,50,15,SS_CENTERIMAGE
+    COMBOBOX        IDC_USERNAMES,60,10,185,75,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Not Allowed",IDC_STATIC,5,35,100,15,SS_CENTERIMAGE
+    CONTROL         "Tree1",IDC_TREE_DISALLOWED,"SysTreeView32",WS_BORDER | 
+                    WS_TABSTOP,5,55,100,175
+    PUSHBUTTON      "--->",IDC_TO_RIGHT,115,65,30,20
+    PUSHBUTTON      "<---",IDC_TO_LEFT,115,90,30,20
+    CTEXT           "Allowed",IDC_STATIC,155,35,100,15,SS_CENTERIMAGE
+    CONTROL         "Tree1",IDC_TREE_ALLOWED,"SysTreeView32",WS_BORDER | 
+                    WS_TABSTOP,155,55,100,175
+    DEFPUSHBUTTON   "OK",IDOK,80,240,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,135,240,50,14
+END
+
+IDD_ADD_USER_DIALOG DIALOG DISCARDABLE  0, 0, 147, 140
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Static",IDC_FIRST_ENTRY,10,10,125,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1,10,25,125,15,ES_PASSWORD | ES_AUTOHSCROLL
+    CTEXT           "New Password",IDC_STATIC,10,45,125,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_NEW_PASSWORD,10,60,125,15,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CTEXT           "Reconfirm New Password",IDC_STATIC,10,80,125,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_RECONFIRM_NEW_PASSWORD,10,95,125,15,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,20,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,115,50,14
+END
+
+IDD_ADD_DIALOG_STOCK DIALOG DISCARDABLE  0, 0, 519, 355
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Manage Stock Set"
+FONT 7, "Tahoma"
+BEGIN
+    GROUPBOX        "Set Description",IDC_STATIC,15,15,210,75
+    LTEXT           "Product ID",IDC_STATIC,25,30,45,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SET_PRODUCTID,75,30,120,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,25,45,45,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_SET_DESCRIPTION,75,45,120,85,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",ID_SET_DESCRIPTION_LIST,200,45,15,10,NOT 
+                    WS_TABSTOP
+    LTEXT           "Remaining Pieces",IDC_STATIC,55,65,66,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_UNSOLD_PIECE_COUNT,125,65,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "",IDC_IMAGE_FRAME,"Static",SS_BLACKFRAME | SS_SUNKEN,
+                    380,5,115,100
+    LTEXT           "Product ID",IDC_STATIC,20,140,40,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PRODUCTID,75,140,120,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,20,155,45,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_ITEM_DESCRIPTION,75,155,119,85,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",ID_ITEM_DESCRIPTION_LIST,200,155,15,10,NOT 
+                    WS_TABSTOP
+    LTEXT           "Photograph",IDC_STATIC,20,175,41,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PHOTO,75,175,90,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "+",ID_ITEM_CHANGE_IMAGE,170,175,20,10
+    PUSHBUTTON      "-",ID_ITEM_REMOVE_IMAGE,195,175,19,10
+    LTEXT           "No. of pieces",IDC_STATIC,240,140,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PIECE_COUNT,295,140,35,12,ES_AUTOHSCROLL
+    LTEXT           "Gross Weight",IDC_STATIC,240,155,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_GROSS_WEIGHT,295,155,35,12,ES_AUTOHSCROLL
+    LTEXT           "Net Weight",IDC_STATIC,240,170,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_NET_WEIGHT,295,170,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "Use net weight for gold value",IDC_ITEM_USE_NET_WEIGHT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,230,190,120,10
+    GROUPBOX        "Diamond",IDC_STATIC,20,210,110,130
+    LTEXT           "Weight (Crts.)",IDC_STATIC,30,225,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_WEIGHT,85,225,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Rate",IDC_STATIC,30,240,40,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_RATE,85,240,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Value",IDC_STATIC,30,255,40,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_VALUE,85,255,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Marked Rate",IDC_STATIC,30,270,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_MARKED_RATE,85,270,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Marked Value",IDC_STATIC,30,285,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_MARKED_VALUE,85,285,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "More details ...",ID_DIAMOND_DETAILS,30,315,90,15
+    GROUPBOX        "Pr / SPr Stones",IDC_STATIC,135,210,110,130
+    LTEXT           "Weight (Crts.)",IDC_STATIC,145,225,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_WEIGHT,200,225,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Rate",IDC_STATIC,145,240,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_RATE,200,240,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Value",IDC_STATIC,145,255,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_VALUE,200,255,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Marked Rate",IDC_STATIC,145,270,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_MARKED_RATE,200,270,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Marked Value",IDC_STATIC,145,285,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_MARKED_VALUE,200,285,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "More details ...",ID_STONE_DETAILS,145,315,90,15
+    GROUPBOX        "Pearl",IDC_STATIC,250,210,110,95
+    LTEXT           "Weight (Crts.)",IDC_STATIC,260,225,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_WEIGHT,315,225,35,12,ES_AUTOHSCROLL
+    LTEXT           "Rate",IDC_STATIC,260,240,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_RATE,315,240,35,12,ES_AUTOHSCROLL
+    LTEXT           "Value",IDC_STATIC,260,255,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_VALUE,315,255,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Marked Rate",IDC_STATIC,260,270,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_MARKED_RATE,315,270,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Marked Value",IDC_STATIC,260,285,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_MARKED_VALUE,315,285,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Diamond Clarity",IDC_STATIC,260,315,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_CLARITY,315,315,35,12,ES_AUTOHSCROLL
+    LTEXT           "Gold Value",IDC_STATIC,375,140,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_GOLD_VALUE,460,140,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Labour Charge",IDC_STATIC,375,155,55,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_LABOUR_CHARGE,460,155,35,12,ES_AUTOHSCROLL
+    LTEXT           "Marked Labour Charge",IDC_STATIC,375,170,80,8,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_MARKED_LABOUR_CHARGE,460,170,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Other Weight (Gms.)",IDC_STATIC,375,185,75,8,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_OTHER_WEIGHT,460,185,35,12,ES_AUTOHSCROLL
+    LTEXT           "Total Price",IDC_STATIC,375,200,65,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TOTAL_PRICE,460,200,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Total Marked Price",IDC_STATIC,375,215,65,8,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TOTAL_MARKED_PRICE,460,215,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "Sold Item",IDC_ITEM_SOLD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,385,235,100,10
+    LTEXT           "Sold in country",IDC_STATIC,385,250,60,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SOLD_COUNTRY,450,250,45,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Edit old serial numbers",ID_OLD_SERIALS,385,280,105,15
+    PUSHBUTTON      "Enter marked value formulas",ID_MARKED_VALUES,385,295,
+                    105,15
+    CONTROL         "Tab2",IDC_ITEM_TABS,"SysTabControl32",0x0,5,110,510,240
+    PUSHBUTTON      "Add Item",ID_ITEM_ADD,235,20,115,15
+    PUSHBUTTON      "Delete Item",ID_ITEM_DELETE,235,35,115,15
+    PUSHBUTTON      "Save and close",ID_SET_SAVE,235,60,115,15
+    PUSHBUTTON      "Close without saving",ID_SET_CANCEL,235,75,115,15
+END
+
+IDD_ADD_DIALOG_KUNDAN DIALOG DISCARDABLE  0, 0, 520, 312
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Manage Kundan Set"
+FONT 7, "Tahoma"
+BEGIN
+    GROUPBOX        "Set Description",IDC_STATIC,15,15,210,75
+    LTEXT           "Product ID",IDC_STATIC,25,30,45,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SET_PRODUCTID,75,30,120,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,25,45,45,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_SET_DESCRIPTION,75,45,120,85,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",ID_SET_DESCRIPTION_LIST,200,45,15,10,NOT 
+                    WS_TABSTOP
+    LTEXT           "Remaining Pieces",IDC_STATIC,55,65,66,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_UNSOLD_PIECE_COUNT,125,65,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "",IDC_IMAGE_FRAME,"Static",SS_BLACKFRAME | SS_SUNKEN,
+                    380,5,115,100
+    LTEXT           "Product ID",IDC_STATIC,20,140,40,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PRODUCTID,75,140,120,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,20,155,45,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_ITEM_DESCRIPTION,75,155,119,85,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",ID_ITEM_DESCRIPTION_LIST,200,155,15,10,NOT 
+                    WS_TABSTOP
+    LTEXT           "Photograph",IDC_STATIC,20,175,41,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PHOTO,75,175,90,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "+",ID_ITEM_CHANGE_IMAGE,170,175,20,10
+    PUSHBUTTON      "-",ID_ITEM_REMOVE_IMAGE,195,175,19,10
+    LTEXT           "No. of pieces",IDC_STATIC,20,190,45,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ITEM_PIECE_COUNT,75,190,35,12,ES_AUTOHSCROLL
+    LTEXT           "Gross Weight",IDC_STATIC,235,140,85,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_GROSS_WEIGHT,320,140,35,12,ES_AUTOHSCROLL
+    LTEXT           "Other Weight (Gms.)",IDC_STATIC,235,155,75,8,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_OTHER_WEIGHT,320,155,35,12,ES_AUTOHSCROLL
+    LTEXT           "Costing",IDC_STATIC,235,170,65,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_COSTING,320,170,35,12,ES_AUTOHSCROLL
+    LTEXT           "Marked Costing",IDC_STATIC,235,186,65,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_MARKED_COSTING,320,186,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Total Price",IDC_STATIC,380,140,65,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TOTAL_PRICE,465,140,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Total Marked Price",IDC_STATIC,380,156,65,8,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TOTAL_MARKED_PRICE,465,156,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "Sold Item",IDC_ITEM_SOLD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,380,175,100,10
+    LTEXT           "Sold in country",IDC_STATIC,380,191,60,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SOLD_COUNTRY,455,190,45,12,ES_AUTOHSCROLL
+    GROUPBOX        "Diamond",IDC_STATIC,20,215,110,85
+    LTEXT           "Weight (Crts.)",IDC_STATIC,30,231,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_WEIGHT,85,231,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Rate",IDC_STATIC,30,246,40,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_RATE,85,246,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Value",IDC_STATIC,30,260,40,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_VALUE,85,260,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "More details ...",ID_DIAMOND_DETAILS,30,276,90,15
+    GROUPBOX        "Pr / SPr Stones",IDC_STATIC,135,215,110,85
+    LTEXT           "Weight (Crts.)",IDC_STATIC,145,231,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_WEIGHT,200,231,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Rate",IDC_STATIC,145,246,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_RATE,200,246,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Value",IDC_STATIC,145,260,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_STONE_VALUE,200,260,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "More details ...",ID_STONE_DETAILS,145,276,90,15
+    GROUPBOX        "Pearl",IDC_STATIC,250,215,110,65
+    LTEXT           "Weight (Crts.)",IDC_STATIC,260,231,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_WEIGHT,315,231,35,12,ES_AUTOHSCROLL
+    LTEXT           "Rate",IDC_STATIC,260,246,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_RATE,315,246,35,12,ES_AUTOHSCROLL
+    LTEXT           "Value",IDC_STATIC,260,260,35,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_PEARL_VALUE,315,260,35,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Diamond Clarity",IDC_STATIC,260,285,50,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DIAMOND_CLARITY,315,285,35,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Edit old serial numbers",ID_OLD_SERIALS,380,241,120,15
+    PUSHBUTTON      "Enter marked value formulas",ID_MARKED_VALUES,380,260,
+                    120,15
+    PUSHBUTTON      "Add Item",ID_ITEM_ADD,235,20,115,15
+    PUSHBUTTON      "Delete Item",ID_ITEM_DELETE,235,35,115,15
+    PUSHBUTTON      "Save and close",ID_SET_SAVE,235,60,115,15
+    PUSHBUTTON      "Close without saving",ID_SET_CANCEL,235,75,115,15
+    CONTROL         "Tab2",IDC_ITEM_TABS,"SysTabControl32",0x0,5,110,510,195
+END
+
+IDD_MARKED_VALUE_FORMULA_DIALOG_KUNDAN DIALOG DISCARDABLE  0, 0, 252, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Marked value formulas for kundan"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Costing",-1,5,5,50,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_COSTING,55,5,190,15,ES_AUTOHSCROLL
+    LTEXT           "Total Marked Price",-1,50,25,65,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FORMULAS_MARKED_PRICE,120,25,70,15,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,75,50,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,50,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "RatnaKiran MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "RatnaKiran\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004\0"
+            VALUE "OriginalFilename", "RatnaKiran.EXE\0"
+            VALUE "ProductName", "RatnaKiran Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_STOCK_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 44
+    END
+
+    IDD_APPENDLIST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_OPTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_DETAILS_DIALOG_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_MARKED_VALUE_FORMULA_DIALOG_STOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_DESCRIPTION_ADD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_ADD_DIALOG_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 448
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_ABOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DETAILS_DIALOG_STOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SHORTINVOICE_DETAILS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_GENERIC_TWO_EDIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_GENERIC_ONE_EDIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_GENERIC_LIST_BOX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_EXPORT_SERIALS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_MOVE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 123
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_DETAILS_DIALOG_KUNDAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_EDIT_PERMISSIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_ADD_USER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_ADD_DIALOG_STOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 512
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 348
+    END
+
+    IDD_ADD_DIALOG_KUNDAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 513
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 305
+    END
+
+    IDD_MARKED_VALUE_FORMULA_DIALOG_KUNDAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "RatnaKiran\n\nRatnaK\nRatnaK Files (*.psf)\n.psf\nRatnaKiran.Document\nRatnaK Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "RatnaKiran"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    IDS_FILEPATH_SUFFIX     ".psf"
+    IDS_REGISTRY_SECTION    "Data"
+    IDS_FILE_PATH           "Path"
+    IDS_SHOW_ERRORS         "Show_Errors"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "About ...."
+    ID_APP_EXIT             "Exit the application"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_USINGFOREXPORTS_NATIVECURRENCY 
+                            "Choose this option to use the native currency for conversions"
+    ID_USINGFOREXPORTS_DOLLARUSD 
+                            "Choose this option to use dollars for conversions"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show/hide toolbar"
+    ID_VIEW_STATUS_BAR      "Show/hide statusbar"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\RatnaKiran.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
